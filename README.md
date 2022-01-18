@@ -10,7 +10,7 @@ The whole file has multiple functions as shown below.
 ### Caution: The project has some flaw that wait for improving!!!
 ## Design Draft and Finite state machine 
 Here is the illustration of function set
-![sdaf](https://user-images.githubusercontent.com/92795777/149643797-32dda0d8-6bfe-4e73-881b-01f7a7138fcc.png)
+<img src="https://user-images.githubusercontent.com/92795777/149643797-32dda0d8-6bfe-4e73-881b-01f7a7138fcc.png" width="800" height="300"> 
 >note: value +1 means the setting value would count up in cycle (ex:minute 00 ~ 59 ...)  
 ### The design draft of entire circuit
 Before I built this project, I drew a sketch that described how many functional modules it needed and the connections between these functional modules. Considering the FPGA board I'm using, the board only has a 4-bit seven-segment and 5 buttons to use in this project. So I need to create a latch circuit to convert some buttons into switches, and create a selector to toggle the display numbers to display (hours:minutes:seconds).
@@ -47,8 +47,7 @@ Tri-state is very important in this module to prevent data transfer at inappropr
 >sd1,sd2: The sign of menu.  
 >sd3:the first digit.  
 >sd4:the second digit.  
-<img src="https://user-images.githubusercontent.com/92795777/149868100-cf84cead-40a5-4c58-ad57-e28d8583fc04.jpg" width="600" height="400">
-<img src="https://user-images.githubusercontent.com/92795777/149868338-9069a7f4-9935-4eb8-9f5c-773d01da41be.png" width="600" height="300">  
+<img src="https://user-images.githubusercontent.com/92795777/149868100-cf84cead-40a5-4c58-ad57-e28d8583fc04.jpg" width="500" height="400">
+<img src="https://user-images.githubusercontent.com/92795777/149868338-9069a7f4-9935-4eb8-9f5c-773d01da41be.png" width="500" height="250">  
 Here is a simple testbench result for simulating the clk_alrm_set module.
-
 
