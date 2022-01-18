@@ -1,13 +1,13 @@
 # Advanced-DigtalClock
 ## Specification and Feature
-The board I am using only has a 4 digit seven segment display for output and 4 buttons for controlling the clock function as input
-The whole file has multiple functions as shown below. 
+The board I am using only has a 4 digit seven segment display for output and 4 buttons for controlling the clock function as input  
+This project has multiple functions as shown below. 
 >1.switching digit  
 >2.disable or enable the alarm function  
 >3.setting the clock digit (hour,minute,second)  
 >4.setting the alarm clock digit (hour,minute,second)  
 >5.counting down timer  
-### Caution: The project has some flaw that wait for improving!!!
+### Note: The project is flawed and needs to be improved! ! !
 ## Design Draft and Finite state machine 
 Here is the illustration of function set
 <img src="https://user-images.githubusercontent.com/92795777/149643797-32dda0d8-6bfe-4e73-881b-01f7a7138fcc.png" width="800" height="300"> 
@@ -36,18 +36,31 @@ Here is a simple testbench result for simulating the FSM module.
 ![狀態機測試](https://user-images.githubusercontent.com/92795777/149867138-2d83927d-2871-401e-b152-59e7697a24b0.png)
 It can be seen from the simulation results that the defect of the Moore machine is that the current state transition is delayed by one cycle. But there is no delay in the output of the FSM, which guarantees that the entire function will not fail or crash.
 ### Clock generater
-<img src="https://user-images.githubusercontent.com/92795777/149765529-221adc9c-2273-46c7-ae12-e2fd43618dc0.png" width="500" height="300">  
+<img src="https://user-images.githubusercontent.com/92795777/149897324-3cc00fd4-b425-4fe8-b671-cb001dedac90.png" width="500" height="300">  
 This project only use 2 types of frequency of clock: 1hz and 2hz.The 1hz frequency is used for clock and timer function,2hz frequency is used for other application like value +1 or FSM...
 
 ### Clock and alarm digit set
 <img src="https://user-images.githubusercontent.com/92795777/149862488-03a5a35f-c20e-4ffc-b7eb-79f56f817101.png" width="500" height="300">  
 This module is a 4-bit register that can be visualized through a seven-segment display.I mimicked the pattern of transferring data between two registers from the textbook.  
-Tri-state is very important in this module to prevent data transfer at inappropriate time.  
 
 >sd1,sd2: The sign of menu.  
 >sd3:the first digit.  
 >sd4:the second digit.  
-<img src="https://user-images.githubusercontent.com/92795777/149868100-cf84cead-40a5-4c58-ad57-e28d8583fc04.jpg" width="500" height="400">
-<img src="https://user-images.githubusercontent.com/92795777/149868338-9069a7f4-9935-4eb8-9f5c-773d01da41be.png" width="500" height="250">  
-Here is a simple testbench result for simulating the clk_alrm_set module.
 
+Tri-state is very important in this module to prevent data transfer at inappropriate time.  
+<img src="https://user-images.githubusercontent.com/92795777/149868100-cf84cead-40a5-4c58-ad57-e28d8583fc04.jpg" width="400" height="300">
+<img src="https://user-images.githubusercontent.com/92795777/149868338-9069a7f4-9935-4eb8-9f5c-773d01da41be.png" width="550" height="300">  
+Here is a simple testbench result for simulating the clk_alrm_set module.
+![001](https://user-images.githubusercontent.com/92795777/149889134-c2307380-b53c-4688-99d0-7430643b7159.png)  
+The purpose of the test is to check that the data outputs (sd3, sd4) are in sync with the registers and the results are in sync.  
+>Take fsm_in as "001" as an example, now sd3 output should be synchronized with ch_1, sd4 should be synchronized with ch_2, sd1 and sd2 should output menu symbols  
+>Here is a list of correspondences  
+>fsm_in: "001" sd1 <-- "1110"(C) sd2 <-- "1010"(H) sd3 <-- ch_1 sd4 <-- ch_2  
+>fsm_in: "010" sd1 <-- "1110"(C) sd2 <-- "1011"(L) sd3 <-- cm_1 sd4 <-- cm_2  
+>fsm_in: "011" sd1 <-- "1110"(C) sd2 <-- "1100"(S) sd3 <-- cs_1 sd4 <-- cs_2  
+>fsm_in: "100" sd1 <-- "1101"(A) sd2 <-- "1010"(H) sd3 <-- ah_1 sd4 <-- ah_2  
+>fsm_in: "101" sd1 <-- "1101"(A) sd2 <-- "1011"(L) sd3 <-- am_1 sd4 <-- am_2  
+>fsm_in: "110" sd1 <-- "1101"(A) sd2 <-- "1100"(S) sd3 <-- as_1 sd4 <-- as_2  
+### Clock display
+<img src="https://user-images.githubusercontent.com/92795777/149896843-cf0c77a7-e097-497f-abdf-e02ddcf60bc2.png" width="300" height="400">  
+This module is the most complex in this entire project because it contains both the normal clock counting and clock alarm function.
