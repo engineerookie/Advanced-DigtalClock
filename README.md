@@ -16,16 +16,16 @@ Here is the illustration of function set
 Before I built this project, I drew a sketch that described how many functional modules it needed and the connections between these functional modules. Considering the FPGA board I'm using, the board only has a 4-bit seven-segment and 5 buttons to use in this project. So I need to create a latch circuit to convert some buttons into switches, and create a selector to toggle the display numbers to display (hours:minutes:seconds).
 Here you can see some of these functional modules and their connections. My idea is that I need other modules that correspond to the outputs of the finite state machine.
 This is my main idea when I sketch.
-![20220117_155044](https://user-images.githubusercontent.com/92795777/149730736-36c91e16-5f7e-4317-b84d-075312a6612b.jpg)
+<img src="https://user-images.githubusercontent.com/92795777/149730736-36c91e16-5f7e-4317-b84d-075312a6612b.jpg" width="800" height="500">  
 And there is another RTL netlist diagram that is created by Quaturs after complited the entire VHDL coding.
-![RTL_diagram](https://user-images.githubusercontent.com/92795777/149730298-b1c4cb23-231f-4f78-9ad9-daaec4427643.png)
+<img src="https://user-images.githubusercontent.com/92795777/149730298-b1c4cb23-231f-4f78-9ad9-daaec4427643.png" width="800" height="500">  
 The RTL netlist doesn't seem to be the same as the sketch, because I've added some external functions so that the whole hardware can function properly.
 >(ex: push button debounce,latch circuit for transiting the push button to mechanical switch...I would explain them later)  
 ## The detail of each module 
-![FSM_diagram](https://user-images.githubusercontent.com/92795777/149733012-8985543b-561c-499f-a8ec-13151d603e65.png)
 ### Finite state machine
+<img src="https://user-images.githubusercontent.com/92795777/149733012-8985543b-561c-499f-a8ec-13151d603e65.png" width="500" height="300">  
 In this case,the finite state machine is the core of our design. According to the diagram of function set,b1 (button 1) and b2 are the input of finite state machine and mode is our State.The state diagram is shown in the figure below.
-![qwef](https://user-images.githubusercontent.com/92795777/149723582-7ead500e-b602-4751-9e52-05e3657c39ab.png)
+<img src="https://user-images.githubusercontent.com/92795777/149723582-7ead500e-b602-4751-9e52-05e3657c39ab.png" width="800" height="500">  
 This state diagram is Moore machine.In this design I will use the Moore machine as my finite state machine.
 >We replace the states shown on the state diagram with symbols (s0 ~ s7), and the decoding list can be found in the clock_FSM vhd file, i.e. coding comments.
 >b1 and b2 are the input of the Finite state machine, the binary number below the state is the output of Finite state machine.
