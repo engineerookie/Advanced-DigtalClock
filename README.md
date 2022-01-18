@@ -25,21 +25,30 @@ The RTL netlist doesn't seem to be the same as the sketch, because I've added so
 ### Finite state machine
 <img src="https://user-images.githubusercontent.com/92795777/149733012-8985543b-561c-499f-a8ec-13151d603e65.png" width="500" height="300">  
 In this case,the finite state machine is the core of our design. According to the diagram of function set,b1 (button 1) and b2 are the input of finite state machine and mode is our State.The state diagram is shown in the figure below.
-<img src="https://user-images.githubusercontent.com/92795777/149723582-7ead500e-b602-4751-9e52-05e3657c39ab.png" width="800" height="500">  
-This state diagram is Moore machine.In this design I will use the Moore machine as my finite state machine.
->We replace the states shown on the state diagram with symbols (s0 ~ s7), and the decoding list can be found in the clock_FSM vhd file, i.e. coding comments.
+<img src="https://user-images.githubusercontent.com/92795777/149723582-7ead500e-b602-4751-9e52-05e3657c39ab.png" width="700" height="400">  
+This state diagram is Moore machine.In this design I will use the Moore machine as my finite state machine.  
+
+>We replace the states shown on the state diagram with symbols (s0 ~ s7), and the decoding list can be found in the clock_FSM vhd file, i.e. coding comments.  
 >b1 and b2 are the input of the Finite state machine, the binary number below the state is the output of Finite state machine.
     
 Note that the clock feed in the FSM is only 2hz, the reason the clock is incredibly slow is that if we increase the clock frequency, the state transitions are too fast to be viewed. So we need low frequencies to stabilize our FSM.  
-Here is a simple testbench for simulating the FSM module.  
+Here is a simple testbench result for simulating the FSM module.  
 ![狀態機測試](https://user-images.githubusercontent.com/92795777/149867138-2d83927d-2871-401e-b152-59e7697a24b0.png)
 It can be seen from the simulation results that the defect of the Moore machine is that the current state transition is delayed by one cycle. But there is no delay in the output of the FSM, which guarantees that the entire function will not fail or crash.
 ### Clock generater
-<img src="https://user-images.githubusercontent.com/92795777/149765529-221adc9c-2273-46c7-ae12-e2fd43618dc0.png" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/92795777/149765529-221adc9c-2273-46c7-ae12-e2fd43618dc0.png" width="500" height="300">  
 This project only use 2 types of frequency of clock: 1hz and 2hz.The 1hz frequency is used for clock and timer function,2hz frequency is used for other application like value +1 or FSM...
 
 ### Clock and alarm digit set
-<img src="https://user-images.githubusercontent.com/92795777/149862488-03a5a35f-c20e-4ffc-b7eb-79f56f817101.png" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/92795777/149862488-03a5a35f-c20e-4ffc-b7eb-79f56f817101.png" width="500" height="300">  
 This module is a 4-bit register that can be visualized through a seven-segment display.I mimicked the pattern of transferring data between two registers from the textbook.  
-The explanation is shown below.  
-<img src="https://user-images.githubusercontent.com/92795777/149866068-07ed3e03-02cc-499d-9cf4-3a12de494ea4.jpg" width="400" height="280">
+Tri-state is very important in this module to prevent data transfer at inappropriate time.  
+
+>sd1,sd2: The sign of menu.  
+>sd3:the first digit.  
+>sd4:the second digit.  
+<img src="https://user-images.githubusercontent.com/92795777/149868100-cf84cead-40a5-4c58-ad57-e28d8583fc04.jpg" width="600" height="400">
+<img src="https://user-images.githubusercontent.com/92795777/149868338-9069a7f4-9935-4eb8-9f5c-773d01da41be.png" width="600" height="300">  
+Here is a simple testbench result for simulating the clk_alrm_set module.
+
+
