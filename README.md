@@ -49,7 +49,7 @@ This module is a 4-bit register that can be visualized through a seven-segment d
 
 Tri-state is very important in this module to prevent data transfer at inappropriate time.  
 <img src="https://user-images.githubusercontent.com/92795777/149868100-cf84cead-40a5-4c58-ad57-e28d8583fc04.jpg" width="400" height="300">
-<img src="https://user-images.githubusercontent.com/92795777/149868338-9069a7f4-9935-4eb8-9f5c-773d01da41be.png" width="550" height="300">  
+<img src="https://user-images.githubusercontent.com/92795777/149868338-9069a7f4-9935-4eb8-9f5c-773d01da41be.png" width="500" height="250">  
 Here is a simple testbench result for simulating the clk_alrm_set module.
 ![001](https://user-images.githubusercontent.com/92795777/149889134-c2307380-b53c-4688-99d0-7430643b7159.png)  
 The purpose of the test is to check that the data outputs (sd3, sd4) are in sync with the registers and the results are in sync.  
@@ -62,5 +62,5 @@ The purpose of the test is to check that the data outputs (sd3, sd4) are in sync
 >fsm_in: "101" sd1 <-- "1101"(A) sd2 <-- "1011"(L) sd3 <-- am_1 sd4 <-- am_2  
 >fsm_in: "110" sd1 <-- "1101"(A) sd2 <-- "1100"(S) sd3 <-- as_1 sd4 <-- as_2  
 ### Clock display
-<img src="https://user-images.githubusercontent.com/92795777/149896843-cf0c77a7-e097-497f-abdf-e02ddcf60bc2.png" width="300" height="400">  
+<img src="https://user-images.githubusercontent.com/92795777/149896843-cf0c77a7-e097-497f-abdf-e02ddcf60bc2.png" width="300" height="350">  
 This module is the most complex in this entire project because it contains both the normal clock counting and clock alarm function.
