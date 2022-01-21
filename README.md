@@ -85,5 +85,7 @@ The clock function consists with two parts which are the display and receive/sto
 The alarm function has three parts which are "push button to trigger the alarm flag","check whether the clock digit match the alarm digit","if they match then blinking led".  
 Here is another screenshot describing the above statement.This module also has the tri-state to prevent,showing on the right hand side.  
 <img src="https://user-images.githubusercontent.com/92795777/150485915-30dd384d-4e28-4bfc-9ce6-dfb631842aaa.png" width="550" height="350">
-<img src="https://user-images.githubusercontent.com/92795777/150486505-89330e6e-58cc-4a7c-9d34-637617480d5a.png" width="400" height="200">
+<img src="https://user-images.githubusercontent.com/92795777/150486505-89330e6e-58cc-4a7c-9d34-637617480d5a.png" width="400" height="200">  
 
+Here is a simple testbench for test the clock function and alarm function and storing data.  
+![dgwwhw](https://user-images.githubusercontent.com/92795777/150489551-5c520318-0c78-4d91-9fc6-ad9fd8db6161.png)
