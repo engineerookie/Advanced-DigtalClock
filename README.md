@@ -84,8 +84,6 @@ This module is the most complex in this entire project because it contains both 
 >d_h1,d_h2,d_m1,d_m2,d_s1,d_s2: output the clock digit  
 >led,aled: indicating the alarm mode  
 
-There exists a critical issue between the clock display module and the clock/alarm digital setting module and we will discuss it later  
-
 The clock function consists with two parts which are the display and receive/store data.These two parts correspond the input signal of FSM,you can check the list at the previous section.Here is the screenshot of part of the code.  
 <img src="https://user-images.githubusercontent.com/92795777/150484327-516680d4-8b4b-4540-9a4c-8cf2631a6a59.png" width="550" height="350">
 <img src="https://user-images.githubusercontent.com/92795777/150484622-75c0440a-4fdf-48b6-bfa6-782f146bf750.png" width="250" height="350">  
