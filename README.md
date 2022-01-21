@@ -10,7 +10,7 @@ This project has multiple functions as shown below.
 ### Note: The project is flawed and needs to be improved! ! !
 ## Design Draft and Finite state machine 
 Here is the illustration of function set
-<img src="https://user-images.githubusercontent.com/92795777/149643797-32dda0d8-6bfe-4e73-881b-01f7a7138fcc.png" width="800" height="300"> 
+<img src="https://user-images.githubusercontent.com/92795777/149643797-32dda0d8-6bfe-4e73-881b-01f7a7138fcc.png" width="800" height="250"> 
 >note: value +1 means the setting value would count up in cycle (ex:minute 00 ~ 59 ...)  
 ### The design draft of entire circuit
 Before I built this project, I drew a sketch that described how many functional modules it needed and the connections between these functional modules. Considering the FPGA board I'm using, the board only has a 4-bit seven-segment and 5 buttons to use in this project. So I need to create a latch circuit to convert some buttons into switches, and create a selector to toggle the display numbers to display (hours:minutes:seconds).
@@ -64,3 +64,6 @@ The purpose of the test is to check that the data outputs (sd3, sd4) are in sync
 ### Clock display
 <img src="https://user-images.githubusercontent.com/92795777/149896843-cf0c77a7-e097-497f-abdf-e02ddcf60bc2.png" width="300" height="350">  
 This module is the most complex in this entire project because it contains both the normal clock counting and clock alarm function.
+
+>There exists a critical issue between the clock display module and the clock and alarm digital setting module and we will discuss it later  
+
