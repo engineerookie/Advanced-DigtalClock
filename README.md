@@ -44,8 +44,8 @@ This project only use 2 types of frequency of clock: 1hz and 2hz.The 1hz frequen
 This module is a 4-bit register that can be visualized through a seven-segment display.I mimicked the pattern of transferring data between two registers from the textbook.  
 
 >sd1,sd2: The sign of menu.  
->sd3:the first digit.  
->sd4:the second digit.  
+>sd3:the first digit output.  
+>sd4:the second digit output.  
 
 Tri-state is very important in this module to prevent data transfer at inappropriate time.  
 <img src="https://user-images.githubusercontent.com/92795777/149868100-cf84cead-40a5-4c58-ad57-e28d8583fc04.jpg" width="400" height="300">
