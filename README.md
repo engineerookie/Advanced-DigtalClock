@@ -93,4 +93,15 @@ Here is another screenshot describing the above statement.This module also has t
 
 Here is a simple testbench for testing the clock function and alarm function and storing data.  
 ![dgwwhw](https://user-images.githubusercontent.com/92795777/150489551-5c520318-0c78-4d91-9fc6-ad9fd8db6161.png)  
-There exits one problem that I haven't fixed is that the data stored in the Clock and alarm digit set will force to refresh the digit of clock when you press down the b1 to cycle the function menu 
+There exits one problem that I haven't fixed is that the data stored in the "Clock and alarm digit set" will force to refresh the digit of "clock display" when you press down the b1 to cycle the function menu.It will be fixed soon by adding more module.
+### Timer
+<img src="https://user-images.githubusercontent.com/92795777/150522509-1555f00b-6314-4de9-b58b-8618e7193087.png" width="300" height="300">  
+The only thing in this module to notice is that the digits value that use to count down is constant,I will add more function in this module soon.  
+
+## Optional module
+The following modules are optional as they are custom made for the FPGA board I am using. After reading this section, you can choose which module you want or remake them.  
+<img src="https://user-images.githubusercontent.com/92795777/150525075-935d49f1-bac0-45aa-be3a-61631744f5b6.png" width="300" height="300">
+<img src="https://user-images.githubusercontent.com/92795777/150525082-c08317e6-3ed2-4443-b713-8b3b19a38890.png" width="300" height="350">
+<img src="https://user-images.githubusercontent.com/92795777/150525097-51a8b5d6-2ba1-486d-9e3e-4975c652fb50.png" width="300" height="250">  
+These modules are simple to understand and they are build for hardware aspect problem
+
