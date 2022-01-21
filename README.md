@@ -81,8 +81,9 @@ This module is the most complex in this entire project because it contains both 
 
 The clock function consists with two parts which are the display and receive/store data.These two parts correspond the input signal of FSM,you can check the list at the previous section.Here is the screenshot of part of the code.  
 <img src="https://user-images.githubusercontent.com/92795777/150484327-516680d4-8b4b-4540-9a4c-8cf2631a6a59.png" width="550" height="350">
-<img src="https://user-images.githubusercontent.com/92795777/150484622-75c0440a-4fdf-48b6-bfa6-782f146bf750.png" width="300" height="350">  
+<img src="https://user-images.githubusercontent.com/92795777/150484622-75c0440a-4fdf-48b6-bfa6-782f146bf750.png" width="250" height="350">  
 The alarm function has three parts which are "push button to trigger the alarm flag","check whether the clock digit match the alarm digit","if they match then blinking led".  
-Here is another screenshot describing the above statement.  
-<img src="https://user-images.githubusercontent.com/92795777/150485915-30dd384d-4e28-4bfc-9ce6-dfb631842aaa.png" width="550" height="350">  
+Here is another screenshot describing the above statement.This module also has the tri-state to prevent,showing on the right hand side.  
+<img src="https://user-images.githubusercontent.com/92795777/150485915-30dd384d-4e28-4bfc-9ce6-dfb631842aaa.png" width="550" height="350">
+<img src="https://user-images.githubusercontent.com/92795777/150486505-89330e6e-58cc-4a7c-9d34-637617480d5a.png" width="400" height="200">
 
