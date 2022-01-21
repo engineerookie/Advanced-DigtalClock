@@ -75,9 +75,16 @@ The purpose of the test is to check that the data outputs (sd3, sd4) are in sync
 >sd4 <-- as_2  
 ### Clock display
 <img src="https://user-images.githubusercontent.com/92795777/149896843-cf0c77a7-e097-497f-abdf-e02ddcf60bc2.png" width="300" height="350">  
-This module is the most complex in this entire project because it contains both the normal clock counting and clock alarm function.
+This module is the most complex in this entire project because it contains both the normal clock counting and clock alarm function.  
 
->There exists a critical issue between the clock display module and the clock/alarm digital setting module and we will discuss it later  
+>clk_1hz: clock input  
+>sw3: toggle alarm mode on/off  
+>fsm_in: signal of FSM  
+>set1,set2: input data for refreshing digit  
+>d_h1,d_h2,d_m1,d_m2,d_s1,d_s2:output the clock digit  
+>led,aled:indicating the alarm mode  
+
+There exists a critical issue between the clock display module and the clock/alarm digital setting module and we will discuss it later  
 
 The clock function consists with two parts which are the display and receive/store data.These two parts correspond the input signal of FSM,you can check the list at the previous section.Here is the screenshot of part of the code.  
 <img src="https://user-images.githubusercontent.com/92795777/150484327-516680d4-8b4b-4540-9a4c-8cf2631a6a59.png" width="550" height="350">
@@ -87,5 +94,6 @@ Here is another screenshot describing the above statement.This module also has t
 <img src="https://user-images.githubusercontent.com/92795777/150485915-30dd384d-4e28-4bfc-9ce6-dfb631842aaa.png" width="550" height="350">
 <img src="https://user-images.githubusercontent.com/92795777/150486505-89330e6e-58cc-4a7c-9d34-637617480d5a.png" width="400" height="200">  
 
-Here is a simple testbench for test the clock function and alarm function and storing data.  
-![dgwwhw](https://user-images.githubusercontent.com/92795777/150489551-5c520318-0c78-4d91-9fc6-ad9fd8db6161.png)
+Here is a simple testbench for testing the clock function and alarm function and storing data.  
+![dgwwhw](https://user-images.githubusercontent.com/92795777/150489551-5c520318-0c78-4d91-9fc6-ad9fd8db6161.png)  
+>
