@@ -81,8 +81,8 @@ This module is the most complex in this entire project because it contains both 
 >sw3: toggle alarm mode on/off  
 >fsm_in: signal of FSM  
 >set1,set2: input data for refreshing digit  
->d_h1,d_h2,d_m1,d_m2,d_s1,d_s2:output the clock digit  
->led,aled:indicating the alarm mode  
+>d_h1,d_h2,d_m1,d_m2,d_s1,d_s2: output the clock digit  
+>led,aled: indicating the alarm mode  
 
 There exists a critical issue between the clock display module and the clock/alarm digital setting module and we will discuss it later  
 
