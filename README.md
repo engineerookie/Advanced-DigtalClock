@@ -65,5 +65,9 @@ The purpose of the test is to check that the data outputs (sd3, sd4) are in sync
 <img src="https://user-images.githubusercontent.com/92795777/149896843-cf0c77a7-e097-497f-abdf-e02ddcf60bc2.png" width="300" height="350">  
 This module is the most complex in this entire project because it contains both the normal clock counting and clock alarm function.
 
->There exists a critical issue between the clock display module and the clock and alarm digital setting module and we will discuss it later  
+>There exists a critical issue between the clock display module and the clock/alarm digital setting module and we will discuss it later  
+
+The clock function consists with two parts which are the display and receive/store data.These two parts correspond the input signal of FSM,you can check the list at the previous section.Here is the screenshot of part of the code.  
+<img src="https://user-images.githubusercontent.com/92795777/150484327-516680d4-8b4b-4540-9a4c-8cf2631a6a59.png" width="550" height="350">
+<img src="https://user-images.githubusercontent.com/92795777/150484622-75c0440a-4fdf-48b6-bfa6-782f146bf750.png" width="300" height="350">
 
