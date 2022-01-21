@@ -55,12 +55,24 @@ Here is a simple testbench result for simulating the clk_alrm_set module.
 The purpose of the test is to check that the data outputs (sd3, sd4) are in sync with the registers and the results are in sync.  
 >Take fsm_in as "001" as an example, now sd3 output should be synchronized with ch_1, sd4 should be synchronized with ch_2, sd1 and sd2 should output menu symbols  
 >Here is a list of correspondences  
->fsm_in: "001" sd1 <-- "1110"(C) sd2 <-- "1010"(H) sd3 <-- ch_1 sd4 <-- ch_2  
->fsm_in: "010" sd1 <-- "1110"(C) sd2 <-- "1011"(L) sd3 <-- cm_1 sd4 <-- cm_2  
->fsm_in: "011" sd1 <-- "1110"(C) sd2 <-- "1100"(S) sd3 <-- cs_1 sd4 <-- cs_2  
->fsm_in: "100" sd1 <-- "1101"(A) sd2 <-- "1010"(H) sd3 <-- ah_1 sd4 <-- ah_2  
->fsm_in: "101" sd1 <-- "1101"(A) sd2 <-- "1011"(L) sd3 <-- am_1 sd4 <-- am_2  
->fsm_in: "110" sd1 <-- "1101"(A) sd2 <-- "1100"(S) sd3 <-- as_1 sd4 <-- as_2  
+>fsm_in: "001" sd1 <-- "1110"(C) sd2 <-- "1010"(H)  
+>sd3 <-- ch_1  
+>sd4 <-- ch_2  
+>fsm_in: "010" sd1 <-- "1110"(C) sd2 <-- "1011"(L)  
+>sd3 <-- cm_1  
+>sd4 <-- cm_2  
+>fsm_in: "011" sd1 <-- "1110"(C) sd2 <-- "1100"(S)  
+>sd3 <-- cs_1  
+>sd4 <-- cs_2  
+>fsm_in: "100" sd1 <-- "1101"(A) sd2 <-- "1010"(H)  
+>sd3 <-- ah_1  
+>sd4 <-- ah_2  
+>fsm_in: "101" sd1 <-- "1101"(A) sd2 <-- "1011"(L)  
+>sd3 <-- am_1  
+>sd4 <-- am_2  
+>fsm_in: "110" sd1 <-- "1101"(A) sd2 <-- "1100"(S)  
+>sd3 <-- as_1  
+>sd4 <-- as_2  
 ### Clock display
 <img src="https://user-images.githubusercontent.com/92795777/149896843-cf0c77a7-e097-497f-abdf-e02ddcf60bc2.png" width="300" height="350">  
 This module is the most complex in this entire project because it contains both the normal clock counting and clock alarm function.
@@ -69,5 +81,8 @@ This module is the most complex in this entire project because it contains both 
 
 The clock function consists with two parts which are the display and receive/store data.These two parts correspond the input signal of FSM,you can check the list at the previous section.Here is the screenshot of part of the code.  
 <img src="https://user-images.githubusercontent.com/92795777/150484327-516680d4-8b4b-4540-9a4c-8cf2631a6a59.png" width="550" height="350">
-<img src="https://user-images.githubusercontent.com/92795777/150484622-75c0440a-4fdf-48b6-bfa6-782f146bf750.png" width="300" height="350">
+<img src="https://user-images.githubusercontent.com/92795777/150484622-75c0440a-4fdf-48b6-bfa6-782f146bf750.png" width="300" height="350">  
+The alarm function has three parts which are "push button to trigger the alarm flag","check whether the clock digit match the alarm digit","if they match then blinking led".  
+Here is another screenshot describing the above statement.  
+<img src="https://user-images.githubusercontent.com/92795777/150485915-30dd384d-4e28-4bfc-9ce6-dfb631842aaa.png" width="550" height="350">  
 
