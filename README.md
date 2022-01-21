@@ -94,4 +94,4 @@ Here is another screenshot describing the above statement.This module also has t
 
 Here is a simple testbench for testing the clock function and alarm function and storing data.  
 ![dgwwhw](https://user-images.githubusercontent.com/92795777/150489551-5c520318-0c78-4d91-9fc6-ad9fd8db6161.png)  
->
+
