@@ -7,7 +7,6 @@ This project has multiple functions as shown below.
 >3.setting the clock digit (hour,minute,second)  
 >4.setting the alarm clock digit (hour,minute,second)  
 >5.counting down timer  
-### Note: The project is flawed and needs to be improved! ! !
 ## Design Draft and Finite state machine 
 Here is the illustration of function set
 <img src="https://user-images.githubusercontent.com/92795777/149643797-32dda0d8-6bfe-4e73-881b-01f7a7138fcc.png" width="800" height="250"> 
@@ -94,4 +93,4 @@ Here is another screenshot describing the above statement.This module also has t
 
 Here is a simple testbench for testing the clock function and alarm function and storing data.  
 ![dgwwhw](https://user-images.githubusercontent.com/92795777/150489551-5c520318-0c78-4d91-9fc6-ad9fd8db6161.png)  
-
+There exits one problem that I haven't fixed is that the data stored in the Clock and alarm digit set will force to refresh the digit of clock when you press down the b1 to cycle the function menu 
