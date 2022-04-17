@@ -93,7 +93,7 @@ Here is another screenshot describing the above statement.This module also has t
 
 Here is a simple testbench for testing the clock function and alarm function and storing data.  
 ![dgwwhw](https://user-images.githubusercontent.com/92795777/150489551-5c520318-0c78-4d91-9fc6-ad9fd8db6161.png)  
-There exits one problem that I haven't fixed is that the data stored in the "Clock and alarm digit set" will force to refresh the digit of "clock display" when you press down the b1 to cycle the function menu.It will be fixed soon by adding more module.
+There exits one problem that I haven't fixed is that the data stored in the "Clock and alarm digit set" will force to refresh the digit of "clock display" while you press down the b1 to cycle the function menu.It will be fixed soon by adding more module.
 ### Timer
 <img src="https://user-images.githubusercontent.com/92795777/150522509-1555f00b-6314-4de9-b58b-8618e7193087.png" width="300" height="300">  
 The only thing in this module to notice is that the digits value that use to count down is constant,I will add more function in this module soon.  
