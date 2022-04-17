@@ -99,7 +99,7 @@ There exits one problem that I haven't fixed is that the data stored in the "Clo
 The only thing in this module to notice is that the digits value that use to count down is constant,I will add more function in this module soon.  
 
 ## Optional module
-The following modules are optional as they are custom made for the FPGA board I am using. After reading this section, you can choose which module you want or remake them.  
+The following modules are optional as they are custom made for the FPGA board I am using. After downloading the code, you can choose which module you want or remake them.  
 <img src="https://user-images.githubusercontent.com/92795777/150525075-935d49f1-bac0-45aa-be3a-61631744f5b6.png" width="300" height="300">
 <img src="https://user-images.githubusercontent.com/92795777/150525082-c08317e6-3ed2-4443-b713-8b3b19a38890.png" width="300" height="350">
 <img src="https://user-images.githubusercontent.com/92795777/150525097-51a8b5d6-2ba1-486d-9e3e-4975c652fb50.png" width="300" height="250">  
