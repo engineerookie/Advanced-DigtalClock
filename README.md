@@ -30,7 +30,7 @@ This state diagram is Moore machine.In this design I will use the Moore machine 
 >We replace the states shown on the state diagram with symbols (s0 ~ s7), and the decoding list can be found in the clock_FSM vhd file, i.e. coding comments.  
 >b1 and b2 are the input of the Finite state machine, the binary number below the state is the output of Finite state machine.
     
-Note that the clock feed in the FSM is only 2hz, the reason the clock is incredibly slow is that if we increase the clock frequency, the state transitions are too fast to be viewed. So we need low frequencies to stabilize our FSM.  
+Note that the clock feed in the FSM is only 2hz, the reason why the clock is incredibly slow is that if we increase the clock frequency, the state transitions are too fast to be viewed. So we need low frequencies to stabilize our FSM.  
 Here is a simple testbench result for simulating the FSM module.  
 ![狀態機測試](https://user-images.githubusercontent.com/92795777/149867138-2d83927d-2871-401e-b152-59e7697a24b0.png)
 It can be seen from the simulation results that the defect of the Moore machine is that the current state transition is delayed by one cycle. But there is no delay in the output of the FSM, which guarantees that the entire function will not fail or crash.
